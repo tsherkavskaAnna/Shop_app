@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MyShop</a>
+    
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSuportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link"aria-current="page" routerLink="/welcome"><i class="bi bi-house-door-fill"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" title="Products" routerLink="/articles"><i class="bi bi-table"></i>Products</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" title="Promotions" routerLink="/offers"><i class="bi bi-megaphone-fill"></i>Promotions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" title="Fidelity" routerLink="/fidelity"><i class="bi bi-credit-card-fill"></i>Fidelity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" title="Clients" routerLink="/clients"><i class="bi bi-people-fill"></i>Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" title="Orders" routerLink="/orders"><i class="bi bi-cart-check-fill"></i>Orders</a>
+          </li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle thumbnail dduser"
+               data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="img-circle" src="../../../assets/image/user.png" width="38" height="38">
+        </button>
+<ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Access</a></li>
+    <li><a class="dropdown-item" href="#">Register</a></li>
+    <li><a class="dropdown-item" href="#">Disability</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" *ngIf="authBasis.isLogged()" routerLink="/logout">Logout {{authBasis.loggedUser()}}</a></li>
+    <li><a class="dropdown-item disabled" *ngIf="!authBasis.isLogged()" href="#">Logout</a></li>
+</ul>
+      </div>
+    </div>
+</div>
+  </nav>

@@ -1,0 +1,14 @@
+<div class="col">
+    <div class="card card-product-grid">
+        <a class="img-wrap"> <img src={{article.image}} alt="pasta" class="img-rounded" width="150" height="180"></a>
+            <div class="info-wrap">
+                <a class="title text-truncate">{{article.description}}</a>
+                <div class="price mb-2">{{article.price | currency: "EUR"}}</div>
+
+                <button href="#" class="btn btn-sm btn-light" (click)="editArt()">
+                    <i class="bi bi-pencil-fill" style="font-size: 16px; margin-right: 3px;"></i>Edit</button>
+                <button href="#" class="btn btn-sm btn-outline-danger" (click)="deleteArt()">
+                    <i class="bi bi-trash3-fill" style="font-size: 15px; margin-right: 2px;"></i>Delete</button>
+            </div>
+    </div>
+</div>

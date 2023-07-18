@@ -1,0 +1,47 @@
+<section class="content-main">
+    <div class="content-header">
+        <h3 class="content-title">Products</h3>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+        <a href="#" class="btn btn-primary">Export</a>
+        <a href="#" class="btn btn-primary">Import</a>
+        <a href="#" class="btn btn-primary">Create</a>
+    </div>
+
+    <div class="card mb-4">
+
+        <header class="card-header">
+            <div class="row gx-3">
+                <div class="col-lg-4 col-md-6 me-auto mb-2">
+                    <input type="text" placeholder="search..." class="form-control">
+                </div>
+                <div class="col-lg-2 col-6 col-md-3">
+                    <select class="form-select">
+                        <option>All</option>
+                        <option>Alimentary</option>
+                        <option>Chemical</option>
+                        <option>Fresh food</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 col-6 col-md-3">
+                    <select class="form-select">
+                    <option>New arrivals</option>
+                    <option>Lowest price</option>
+                    <option>Bestsellers</option>
+                </select>
+                </div>
+            </div>
+        </header>
+<div class="cart-body pt-4 ps-3 mb-4">
+    <div class="row gx-3 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5" *ngIf="articles$">
+       <app-articles-card
+       *ngFor="let article of articles$"
+       [article]="article"
+       (delete)="handleDelete($event)"
+       (edit)="handleEdit($event)"
+       ></app-articles-card>
+    </div>
+</div>
+
+    </div>
+</section>

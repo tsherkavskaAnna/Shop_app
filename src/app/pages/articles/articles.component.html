@@ -1,0 +1,29 @@
+<h1>Articles available</h1>
+
+<table id="items" class="table table-striped">
+    <caption>Grocery</caption>
+    <thead class="thead-dark">
+        <tr>
+            <th>CodArt</th>
+            <th>Description</th>
+            <th>Un</th>
+            <th>Quantity</th>
+            <th>Weight(KG/LT)</th>
+            <th>Price</th>
+            <th>Active</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles">
+        <td>{{article.codart}}</td>
+        <td>{{article.description}}</td>
+        <td>{{article.un}}</td>
+        <td>{{article.quantity}}</td>
+        <td>{{article.weight}}</td>
+        <td>{{article.price | currency: 'EUR'}}</td>
+        <td>{{article.active}}</td>
+        <td>{{article.date | date:'d-MM-yyyy'}}</td>
+        </tr>
+    </tbody>
+</table>
